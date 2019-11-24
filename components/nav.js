@@ -1,56 +1,35 @@
-import React from 'react'
-import Link from 'next/link'
-
-const links = [
-  { href: 'https://zeit.co/now', label: 'ZEIT' },
-  { href: 'https://github.com/zeit/next.js', label: 'GitHub' },
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
+import React from "react";
+import { css } from "../static/variables";
+// import Link from 'next/link'
 
 const Nav = () => (
   <nav>
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      {links.map(({ key, href, label }) => (
-        <li key={key}>
-          <a href={href}>{label}</a>
-        </li>
-      ))}
-    </ul>
+    <div className="header">
+      <div className="names">ayesha & aman</div>
+    </div>
 
     <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
       nav {
-        text-align: center;
+        z-index: ${css.zIndex.navigation};
+        position: fixed;
+        width: 100%;
+        top: 0;
       }
-      ul {
+      .header {
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        padding: 12px 0;
+        background: rgba(255, 255, 255, 0.75);
       }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
-        text-decoration: none;
-        font-size: 13px;
+
+      .names {
+        font-family: 'Pacifico', cursive;
+        font-size: 28px;
+        margin: 0 0 0 20px;
       }
     `}</style>
   </nav>
-)
+);
 
-export default Nav
+export default Nav;
