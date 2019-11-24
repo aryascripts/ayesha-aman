@@ -7,8 +7,13 @@ export const ImageContent = props => (
     </div>
 
     <div className="text">
-			<div className="title">{props.title}</div>
-      <div className="para">{props.text}</div>
+      <div className="title">{props.title}</div>
+
+      <div className="paragraphs">
+        {props.text.map((para, index) => (
+          <div key={index} className="para">{para}</div>
+        ))}
+      </div>
     </div>
 
     <style jsx>{`
@@ -25,16 +30,29 @@ export const ImageContent = props => (
 			.img-wrapper {
 				flex-grow: 1;
 				min-width: 250px;
-				margin-right: 20px;
+				margin: 0 20px 20px 0;
+			}
+
+			.text {
+				flex-grow: 2;
+				max-width: 50%;
+				font-family: 'Helvetica', 'Arial', sans-serif;
+			}
+			
+			.paragraphs {
+				background: rgba(255, 255, 255, 0.6);
+				padding: 10px;
+			}
+			.para {
+				padding: 10px 0;
 			}
 
 			.title {
 				text-transform: uppercase;
-				font-family: 'Helvetica', 'Arial', sans-serif;
 				font-size: 20px;
 				font-weight: 600;
 				display: inline-block;
-
+				padding: 3px 5px;
 				background-color: white;
 			}
 
@@ -45,10 +63,12 @@ export const ImageContent = props => (
 				border: 15px solid white;
 			}
 
-			.text {
-				flex-grow: 1;
-				min-width: 300px;
+			@media only screen and (max-width: 640px) {
+				.text {
+					max-width: 100%;
+				}
 			}
+
 		`}</style>
   </div>
 );
