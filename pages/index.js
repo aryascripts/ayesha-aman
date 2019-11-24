@@ -12,7 +12,13 @@ const Home = () => (
       <link rel="stylesheet" href="/base.css" />
       <link href="https://fonts.googleapis.com/css?family=Pacifico|Pinyon+Script|Source+Sans+Pro:300&display=swap" rel="stylesheet" />
 
+      <meta name="description" content="The favorite story of Ayesha & Aman" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta property="og:title" content="Ayesha & Aman: Our Story" />
+      <meta property="og:url" content="https://ayesha-aman.love" />
+      <meta property="og:description" content="The favorite story of Ayesha & Aman" />
+      <meta property="og:image" content="https://ayesha-aman.love/images/ab-logo-red.png" />
+
 
     </Head>
 
