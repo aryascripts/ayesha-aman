@@ -23,7 +23,7 @@ export const HomeImage = () => (
         }
 
         .ab-logo {
-          background-image: url("./images/ab-logo.png");
+          background-image: url("./images/ab-logo-70.png");
           width: 260px;
           height: 250px;
           background-size: cover;
