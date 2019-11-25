@@ -67,6 +67,9 @@ export const ImageContent = props => (
 				.text {
 					max-width: 100%;
 				}
+				.img-wrapper {
+					margin: 0 0 20px 0;
+				}
 			}
 
 		`}</style>

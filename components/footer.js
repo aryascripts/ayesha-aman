@@ -23,7 +23,7 @@ export const Footer = () => (
 			font-size: 18px;
 			font-family: 'Source Sans Pro', sans-serif;
 			padding: 0 25px;
-			width: 60%;
+			width: 85%;
 			margin: 10px auto 0 auto;
 			text-align: center;
 			max-width: 900px;
